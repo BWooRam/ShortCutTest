@@ -23,8 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <meta-data android:name="android.app.shortcuts"
-                android:resource="@xml/shortcuts" />
+            <!--<meta-data android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />-->
         </activity>
         <activity
             android:name=".ShortCut1Activity"
@@ -40,6 +40,15 @@
             android:name=".ShortCut3Activity"
             android:exported="true"
             android:theme="@style/Theme.ShortCutTest"/>
+
+        <activity
+            android:name=".ShortCutSampleActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ShortCutTest">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

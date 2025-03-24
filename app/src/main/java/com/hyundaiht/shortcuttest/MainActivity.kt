@@ -40,24 +40,36 @@ class MainActivity : ComponentActivity() {
                         Button(onClick = {
                             createDynamicShortcut()
                         }) {
-                            Text("Create Dynamic ShortCut")
+                            Text("기능1 - Create Dynamic ShortCut")
                         }
                         Button(onClick = {
                             removeDynamicShortcut()
                         }) {
-                            Text("Remove Dynamic ShortCut")
+                            Text("기능2 - Remove Dynamic ShortCut")
                         }
                         Button(onClick = {
                             checkDynamicShortcut()
                         }) {
-                            Text("Check Dynamic ShortCut")
+                            Text("기능3 - Check Dynamic ShortCut")
                         }
 
                         //Pin Shortcut
                         Button(onClick = {
                             requestPinShortcut()
                         }) {
-                            Text("Request Pin ShortCut")
+                            Text("기능4 - Request Pin ShortCut")
+                        }
+
+                        //Pin Shortcut
+                        Button(onClick = {
+                            startActivity(
+                                Intent(
+                                    this@MainActivity,
+                                    ShortCutSampleActivity::class.java
+                                )
+                            )
+                        }) {
+                            Text("적용한 샘플로 이동")
                         }
                     }
                 }
@@ -92,7 +104,7 @@ class MainActivity : ComponentActivity() {
 
     private fun checkDynamicShortcut() {
         val shortcuts = ShortcutManagerCompat.getDynamicShortcuts(this@MainActivity)
-        for(shortcut in shortcuts){
+        for (shortcut in shortcuts) {
             Log.d(tag, "checkDynamicShortcut shortcut = $shortcut")
             Log.d(tag, "checkDynamicShortcut shortcut id = ${shortcut.id}")
             Log.d(tag, "checkDynamicShortcut shortcut shortLabel = ${shortcut.shortLabel}")
