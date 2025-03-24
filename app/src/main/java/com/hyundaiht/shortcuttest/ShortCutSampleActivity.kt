@@ -88,6 +88,36 @@ class ShortCutSampleActivity : ComponentActivity() {
                     action = Intent.ACTION_VIEW
                     putExtra(shortCutName, "가스 밸브")
                 }
+            ),
+            ShortCutManager.ShortCut(
+                id = "FavoritesShortCut4",
+                shortLabel = "Device4",
+                longLabel = "Device4",
+                icon = IconCompat.createWithResource(this, R.drawable.list_ic_gas_on),
+                intent = Intent(this, ShortCutSampleActivity::class.java).apply {
+                    action = Intent.ACTION_VIEW
+                    putExtra(shortCutName, "Device4")
+                }
+            ),
+            ShortCutManager.ShortCut(
+                id = "FavoritesShortCut5",
+                shortLabel = "Device5",
+                longLabel = "Device5",
+                icon = IconCompat.createWithResource(this, R.drawable.list_ic_gas_on),
+                intent = Intent(this, ShortCutSampleActivity::class.java).apply {
+                    action = Intent.ACTION_VIEW
+                    putExtra(shortCutName, "Device5")
+                }
+            ),
+            ShortCutManager.ShortCut(
+                id = "FavoritesShortCut6",
+                shortLabel = "Device6",
+                longLabel = "Device6",
+                icon = IconCompat.createWithResource(this, R.drawable.list_ic_gas_on),
+                intent = Intent(this, ShortCutSampleActivity::class.java).apply {
+                    action = Intent.ACTION_VIEW
+                    putExtra(shortCutName, "Device6")
+                }
             )
         )
 
@@ -134,13 +164,14 @@ class ShortCutSampleActivity : ComponentActivity() {
                 ) { innerPadding ->
                     val context = LocalContext.current
                     var rememberScreen by remember { mutableIntStateOf(0) }
-
+                    val maxCount = shortCutManager.maxShortcutCount(context).getOrNull()
                     Column(
                         modifier = Modifier
                             .fillMaxSize()
                             .padding(innerPadding)
                     ) {
                         Text("Short Cut 이벤트 : $shortCutEventName")
+                        Text("Short Cut maxCount : $maxCount")
                         TextWithButton("DeviceFavoritesScreen 보여주기") {
                             rememberScreen = 0
                         }
@@ -214,7 +245,7 @@ class ShortCutSampleActivity : ComponentActivity() {
                             .fillMaxWidth()
                             .wrapContentHeight()
                     ) {
-                        Text(modifier = Modifier.weight(1f), text = item.longLabel.toString())
+                        Text(modifier = Modifier.weight(1f), text = "label = ${item.shortLabel}\nisEnabled = ${item.isEnabled}")
                         TextButton(modifier = Modifier.wrapContentSize(), onClick = {
                             shortCutManager.removeShortCuts(context, mutableListOf(item.id))
                             shortCutInfo = shortCutManager.getShortCut(context)
@@ -253,7 +284,7 @@ class ShortCutSampleActivity : ComponentActivity() {
                             .wrapContentHeight()
                     ) {
                         IconCompatImage(iconCompat = item.icon)
-                        Text(modifier = Modifier.weight(1f), text = item.longLabel)
+                        Text(modifier = Modifier.weight(1f), text = item.shortLabel)
                         TextButton(modifier = Modifier.wrapContentSize(), onClick = {
                             shortCutManager.createShortCut(context, item)
                             shortCutInfo = shortCutManager.getShortCut(context)

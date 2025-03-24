@@ -58,4 +58,79 @@
             </intent>
         </capability>
     </shortcut>
+
+    <shortcut
+        android:shortcutId="shortcutId4"
+        android:enabled="true"
+        android:icon="@drawable/img_cat_wizard"
+        android:shortcutShortLabel="@string/short_cut_short_label3"
+        android:shortcutLongLabel="@string/short_cut_long_label3"
+        android:shortcutDisabledMessage="@string/short_cut_disabled_message3">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.hyundaiht.shortcuttest"
+            android:targetClass="com.hyundaiht.shortcuttest.ShortCut2Activity">
+        </intent>
+
+        <capability android:name="actions.intent.START_EXERCISE">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.hyundaiht.shortcuttest"
+                android:targetClass="com.hyundaiht.shortcuttest.MainActivity">
+                <parameter
+                    android:name="exercise.name"
+                    android:key="exerciseType"/>
+            </intent>
+        </capability>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="shortcutId5"
+        android:enabled="true"
+        android:icon="@drawable/img_cat_wizard"
+        android:shortcutShortLabel="@string/short_cut_short_label3"
+        android:shortcutLongLabel="@string/short_cut_long_label3"
+        android:shortcutDisabledMessage="@string/short_cut_disabled_message3">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.hyundaiht.shortcuttest"
+            android:targetClass="com.hyundaiht.shortcuttest.ShortCut2Activity">
+        </intent>
+
+        <capability android:name="actions.intent.START_EXERCISE">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.hyundaiht.shortcuttest"
+                android:targetClass="com.hyundaiht.shortcuttest.MainActivity">
+                <parameter
+                    android:name="exercise.name"
+                    android:key="exerciseType"/>
+            </intent>
+        </capability>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="shortcutId6"
+        android:enabled="true"
+        android:icon="@drawable/img_cat_wizard"
+        android:shortcutShortLabel="@string/short_cut_short_label3"
+        android:shortcutLongLabel="@string/short_cut_long_label3"
+        android:shortcutDisabledMessage="@string/short_cut_disabled_message3">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.hyundaiht.shortcuttest"
+            android:targetClass="com.hyundaiht.shortcuttest.ShortCut2Activity">
+        </intent>
+
+        <capability android:name="actions.intent.START_EXERCISE">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.hyundaiht.shortcuttest"
+                android:targetClass="com.hyundaiht.shortcuttest.MainActivity">
+                <parameter
+                    android:name="exercise.name"
+                    android:key="exerciseType"/>
+            </intent>
+        </capability>
+    </shortcut>
 </shortcuts>

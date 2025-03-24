@@ -69,4 +69,10 @@ class ShortCutManager {
             ShortcutManagerCompat.removeAllDynamicShortcuts(context)
         }
     }
+
+    fun maxShortcutCount(context: Context): Result<Int> {
+        return kotlin.runCatching {
+            ShortcutManagerCompat.getMaxShortcutCountPerActivity(context)
+        }
+    }
 }

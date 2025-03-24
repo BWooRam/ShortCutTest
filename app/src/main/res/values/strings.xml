@@ -11,4 +11,16 @@
     <string name="short_cut_short_label3">Short3</string>
     <string name="short_cut_long_label3">Short Cut Long Label Test3</string>
     <string name="short_cut_disabled_message3">shortcutDisabled3</string>
+
+    <string name="short_cut_short_label4">Short4</string>
+    <string name="short_cut_long_label4">Short Cut Long Label Test4</string>
+    <string name="short_cut_disabled_message4">shortcutDisabled4</string>
+
+    <string name="short_cut_short_label5">Short5</string>
+    <string name="short_cut_long_label5">Short Cut Long Label Test5</string>
+    <string name="short_cut_disabled_message5">shortcutDisabled5</string>
+
+    <string name="short_cut_short_label6">Short6</string>
+    <string name="short_cut_long_label6">Short Cut Long Label Test6</string>
+    <string name="short_cut_disabled_message6">shortcutDisabled6</string>
 </resources>
