@@ -151,26 +151,12 @@ class ShortCutSampleActivity : ComponentActivity() {
 
                         when (rememberScreen) {
                             0 -> {
-                                shortCutManager.removeShortCuts(
-                                    context,
-                                    mutableListOf(
-                                        registrationPageShortCuts[0].id,
-                                        registrationPageShortCuts[1].id,
-                                        registrationPageShortCuts[2].id
-                                    )
-                                )
+                                shortCutManager.removeAllShortCuts(context)
                                 DeviceFavoritesScreen()
                             }
 
                             1 -> {
-                                shortCutManager.removeShortCuts(
-                                    context,
-                                    mutableListOf(
-                                        deviceFavoritesShortCuts[0].id,
-                                        deviceFavoritesShortCuts[1].id,
-                                        deviceFavoritesShortCuts[2].id
-                                    )
-                                )
+                                shortCutManager.removeAllShortCuts(context)
                                 RegistrationPageScreen()
                             }
                         }

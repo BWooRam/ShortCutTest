@@ -63,4 +63,10 @@ class ShortCutManager {
             ShortcutManagerCompat.removeDynamicShortcuts(context, ids)
         }
     }
+
+    fun removeAllShortCuts(context: Context): Result<Unit> {
+        return kotlin.runCatching {
+            ShortcutManagerCompat.removeAllDynamicShortcuts(context)
+        }
+    }
 }
